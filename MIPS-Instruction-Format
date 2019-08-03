@@ -1,0 +1,19 @@
+Instruction Format.
+R	opcode (3)	rs (4)	rt (4)	rd (4)	shamt (14)	funct (3)
+I	opcode (3)	rs (4)	rt (4)	immediate (21)
+J	opcode (3)	address (29)
+
+R-type instructions
+000s  ssst   tttd     ddd0  0000  0000  0000  0010 --add (R)
+000s  ssst   tttd     ddd0  0000  0000  0000  0000 --and (R)
+000s  ssst   tttd     ddd0  0000  0000  0000  0011 --xor (R)
+000s  ssst   tttd     ddd0  0000  0000  0000  0001 --sub (R)
+000s  sss0  0000  0000  0000  0000  0000  0100 --jr (R)
+
+I-type instructions
+001s ssst ttti iiii iiii iiii iiii iiii --addi (I)
+010s ssst ttti iiii iiii iiii iiii iiii --andi (I)
+011s ssst ttti iiii iiii iiii iiii iiii --beq (I)
+100s ssst ttti iiii iiii iiii iiii iiii --lw (I)
+101s ssst ttti iiii iiii iiii iiii iiii --sw (I)
+110s ssst ttti iiii iiii iiii iiii iiii --subi (I) 
